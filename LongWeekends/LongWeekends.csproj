@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
+    <PackageReference Include="EFCore.NamingConventions" Version="10.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\ModuleManagementMigrations\ModuleManagementMigrations.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Haskap.DddBase.Application.Contracts">
+      <HintPath>..\References\Haskap.DddBase.Application.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Domain">
+      <HintPath>..\References\Haskap.DddBase.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Domain.Shared">
+      <HintPath>..\References\Haskap.DddBase.Domain.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Infra">
+      <HintPath>..\References\Haskap.DddBase.Infra.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Infra.Db.Contexts.EfCoreContext">
+      <HintPath>..\References\Haskap.DddBase.Infra.Db.Contexts.EfCoreContext.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext">
+      <HintPath>..\References\Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext.dll</HintPath>
+    </Reference>
+    <Reference Include="Haskap.DddBase.Utilities">
+      <HintPath>..\References\Haskap.DddBase.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.GlobalExceptionHandling.Application.Contracts">
+      <HintPath>..\References\Modules.GlobalExceptionHandling.Application.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.GlobalExceptionHandling.Module">
+      <HintPath>..\References\Modules.GlobalExceptionHandling.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.GlobalExceptionHandling.Presentation">
+      <HintPath>..\References\Modules.GlobalExceptionHandling.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.ModuleManagement.Application.Contracts">
+      <HintPath>..\References\Modules.ModuleManagement.Application.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.ModuleManagement.Module">
+      <HintPath>..\References\Modules.ModuleManagement.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.SpecialDayBase.Application.Contracts">
+      <HintPath>..\References\Modules.SpecialDayBase.Application.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.SpecialDayBase.Application.Dtos">
+      <HintPath>..\References\Modules.SpecialDayBase.Application.Dtos.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.SpecialDayBase.Domain.Shared">
+      <HintPath>..\References\Modules.SpecialDayBase.Domain.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.SpecialDayBase.Module">
+      <HintPath>..\References\Modules.SpecialDayBase.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.TurkiyeSpecialDay.Application.Contracts">
+      <HintPath>..\References\Modules.TurkiyeSpecialDay.Application.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Modules.TurkiyeSpecialDay.Module">
+      <HintPath>..\References\Modules.TurkiyeSpecialDay.Module.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

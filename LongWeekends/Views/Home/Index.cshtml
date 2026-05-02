@@ -1,0 +1,104 @@
+﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+    var antiforgeryToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+
+    ViewData["Title"] = "Long Weekends";
+}
+
+<div id="calendar">
+</div>
+
+@section Scripts {
+    <script src='~/lib/fullcalendar-6.1.20/dist/index.global.min.js'></script>
+    <script src='~/lib/fullcalendar-6.1.20/packages/core/locales/tr.global.min.js'></script>
+
+    <script>
+
+        var calendar = null;
+
+        var eventColor = {
+            temporaryColor: 'bg-secondary',
+            permanentColor: 'bg-primary',
+            holidayColor: 'bg-danger',
+            specialDayColor: 'bg-secondary'
+        };
+
+        $(document).ready(function () {
+            let calendarEl = document.getElementById('calendar');
+            calendar = new FullCalendar.Calendar(calendarEl, {
+                timeZone: 'local',
+                initialView: 'dayGridMonth',
+                locale: 'tr',
+                headerToolbar: {
+                    start: 'title', // will normally be on the left. if RTL, will be on the right
+                    center: '',
+                    end: 'today prev,next' // will normally be on the right. if RTL, will be on the left
+                },
+
+                datesSet: function (dateInfo) {
+                    clearEvents();
+                    setDayGridMonthViewEvents(dateInfo.startStr, dateInfo.endStr);
+                },
+
+                eventContent: function (arg) {
+                    if (calendar.view.type == "dayGridMonth" || arg.event.allDay) {
+                        return { html: arg.event.title };
+                    }
+
+                    return true;
+                },
+            });
+
+            calendar.render();
+        });
+
+        function setDayGridMonthViewEvents(startDate, endDate) {
+            $.ajax({
+                type: 'POST',
+                headers: {
+                    'RequestVerificationToken': '@antiforgeryToken'
+                },
+                url: '@Url.Action("GetDayGridMonthEvents", "Home")',
+                data: {
+                    startDateTime: startDate,
+                    endDateTime: endDate
+                }
+            }).done(function (data, status, xhr) {
+                $.each(data, function (index, value) {
+                    let title = '';
+
+                    $.each(value.displayTexts, function (titleIndex, titleValue) {
+                        title += '<p><strong>' + titleValue + '</strong></p>';
+                    });
+
+                    let event = {
+                        //id: value.id,
+                        title: title, //value.displayTexts.join('<br/>'),
+                        allDay: true,
+                        start: value.date,
+                        //end: value.reservationDate,
+                        classNames: [value.isHoliday == true ? eventColor.holidayColor : eventColor.temporaryColor],
+                        display: 'background'
+                    }
+
+                    // if (value.isPublicHoliday) {
+                    //     event.classNames = [eventColor.holidayColor];
+                    // }else if(value.isSpecialDay){
+                    //     event.classNames = [eventColor.specialDayColor];
+                    // }
+
+                    calendar.addEvent(event);
+                });
+            });
+        }
+
+        function clearEvents() {
+            let events = calendar.getEvents();
+            for (let i = 0; i < events.length; i++) {
+                events[i].remove();
+            }
+        }
+
+    </script>
+}

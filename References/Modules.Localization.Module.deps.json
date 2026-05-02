@@ -1,0 +1,769 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Modules.Localization.Module/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Infra": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Modules.Localization.Application": "1.0.0",
+          "Modules.Localization.Application.Contracts": "1.0.0",
+          "Modules.Localization.Infra": "1.0.0",
+          "Modules.Localization.Presentation": "1.0.0",
+          "Modules.ModuleManagement.Application.Contracts": "1.0.0",
+          "Modules.AuditLog.Application.Contracts.Reference": "1.0.0.0",
+          "Modules.AuditLog.Domain.Reference": "1.0.0.0",
+          "Modules.AuditLog.Infra.Reference": "1.0.0.0",
+          "Modules.Localization.Application.Contracts.Reference": "1.0.0.0",
+          "Modules.Localization.Application.Reference": "1.0.0.0",
+          "Modules.Localization.Application.Dtos.Reference": "1.0.0.0",
+          "Modules.Localization.Domain.Reference": "1.0.0.0",
+          "Modules.Localization.Infra.Reference": "1.0.0.0",
+          "Modules.Localization.Presentation.Reference": "1.0.0.0",
+          "Modules.ModuleManagement.Application.Contracts.Reference": "1.0.0.0",
+          "Modules.ModuleManagement.Application.Dtos.Reference": "1.0.0.0",
+          "Modules.ModuleManagement.Domain.Reference": "1.0.0.0",
+          "Modules.ModuleManagement.IntegrationEvents.Reference": "1.0.0.0",
+          "Modules.Tenants.Application.Dtos.Reference": "1.0.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Module.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/5.0.0": {
+        "runtime": {
+          "lib/net8.0/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        }
+      },
+      "EFCore.NamingConventions/10.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/EFCore.NamingConventions.dll": {
+            "assemblyVersion": "10.0.1.0",
+            "fileVersion": "10.0.1.0"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/10.0.7": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
+            "assemblyVersion": "10.0.7.0",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/10.0.7": {
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "10.0.7.0",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/10.0.7": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "10.0.7.0",
+            "fileVersion": "10.0.726.21808"
+          }
+        }
+      },
+      "Npgsql/10.0.2": {
+        "runtime": {
+          "lib/net10.0/Npgsql.dll": {
+            "assemblyVersion": "10.0.2.0",
+            "fileVersion": "10.0.2.0"
+          }
+        }
+      },
+      "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.1": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7",
+          "Npgsql": "10.0.2"
+        },
+        "runtime": {
+          "lib/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
+            "assemblyVersion": "10.0.1.0",
+            "fileVersion": "10.0.1.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Application/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application.Contracts": "1.0.0",
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7"
+        },
+        "runtime": {
+          "Haskap.DddBase.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application.Dtos": "1.0.0"
+        },
+        "runtime": {
+          "Haskap.DddBase.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Application.Dtos/1.0.0": {
+        "runtime": {
+          "Haskap.DddBase.Application.Dtos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Domain/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "5.0.0",
+          "Haskap.DddBase.Application.Dtos": "1.0.0",
+          "Haskap.DddBase.Domain.Shared": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7"
+        },
+        "runtime": {
+          "Haskap.DddBase.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Domain.Shared/1.0.0": {
+        "runtime": {
+          "Haskap.DddBase.Domain.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "resources": {
+          "en-US/Haskap.DddBase.Domain.Shared.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/Haskap.DddBase.Domain.Shared.resources.dll": {
+            "locale": "tr-TR"
+          }
+        }
+      },
+      "Haskap.DddBase.Infra/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "Haskap.DddBase.Infra.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Infra.Db.Contexts.EfCoreContext/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7"
+        },
+        "runtime": {
+          "Haskap.DddBase.Infra.Db.Contexts.EfCoreContext.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Infra.Db.Contexts.EfCoreContext": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
+        },
+        "runtime": {
+          "Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Presentation/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Domain.Shared": "1.0.0",
+          "Haskap.DddBase.Infra": "1.0.0"
+        },
+        "runtime": {
+          "Haskap.DddBase.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Haskap.DddBase.Utilities/1.0.0": {
+        "runtime": {
+          "Haskap.DddBase.Utilities.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "Modules.AuditLog.Application.Contracts.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Domain/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "5.0.0",
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Domain.Shared": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7"
+        },
+        "runtime": {
+          "Modules.AuditLog.Domain.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Infra/1.0.0": {
+        "dependencies": {
+          "EFCore.NamingConventions": "10.0.1",
+          "Haskap.DddBase.Infra": "1.0.0",
+          "Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Modules.AuditLog.Application.Contracts": "1.0.0",
+          "Modules.AuditLog.Domain": "1.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
+        },
+        "runtime": {
+          "Modules.AuditLog.Infra.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application": "1.0.0",
+          "Modules.Localization.Application.Contracts": "1.0.0",
+          "Modules.Localization.Application.Dtos": "1.0.0",
+          "Modules.Localization.Domain": "1.0.0",
+          "Modules.ModuleManagement.IntegrationEvents": "1.0.0",
+          "Modules.Tenants.Application.Dtos": "1.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Application.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application.Contracts": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Modules.Localization.Application.Dtos": "1.0.0",
+          "Modules.Tenants.Application.Dtos": "1.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Application.Contracts.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application.Dtos/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application.Dtos": "1.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Application.Dtos.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Domain/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Modules.AuditLog.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Domain.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Infra/1.0.0": {
+        "dependencies": {
+          "EFCore.NamingConventions": "10.0.1",
+          "Haskap.DddBase.Infra": "1.0.0",
+          "Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7",
+          "Modules.AuditLog.Domain": "1.0.0",
+          "Modules.AuditLog.Infra": "1.0.0",
+          "Modules.Localization.Application.Contracts": "1.0.0",
+          "Modules.Localization.Domain": "1.0.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.1"
+        },
+        "runtime": {
+          "Modules.Localization.Infra.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Presentation/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Application": "1.0.0",
+          "Haskap.DddBase.Application.Contracts": "1.0.0",
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Presentation": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Modules.Localization.Application.Contracts": "1.0.0",
+          "Modules.Localization.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Modules.Localization.Presentation.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.7",
+          "Modules.ModuleManagement.Application.Dtos": "1.0.0",
+          "Modules.ModuleManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Modules.ModuleManagement.Application.Contracts.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Application.Dtos/1.0.0": {
+        "runtime": {
+          "Modules.ModuleManagement.Application.Dtos.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Domain/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.7",
+          "Modules.AuditLog.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Modules.ModuleManagement.Domain.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "Haskap.DddBase.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Modules.ModuleManagement.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.Tenants.Application.Dtos/1.0.0": {
+        "runtime": {
+          "Modules.Tenants.Application.Dtos.dll": {
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Application.Contracts.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.AuditLog.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Domain.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.AuditLog.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.AuditLog.Infra.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.AuditLog.Infra.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application.Contracts.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Application.Dtos.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Application.Dtos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Domain.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Infra.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Infra.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Localization.Presentation.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Localization.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Application.Contracts.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.ModuleManagement.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Application.Dtos.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.ModuleManagement.Application.Dtos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.Domain.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.ModuleManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.ModuleManagement.IntegrationEvents.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.ModuleManagement.IntegrationEvents.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Modules.Tenants.Application.Dtos.Reference/1.0.0.0": {
+        "runtime": {
+          "Modules.Tenants.Application.Dtos.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Modules.Localization.Module/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ardalis.GuardClauses/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jVPRvLw0xIUFto2cMrKgRYADWIHbEEfzZHGiU/swwNgl1zo28Q1zfSa3VUC3C0s9DyhFDPSaF4dEDQRyTZUcyQ==",
+      "path": "ardalis.guardclauses/5.0.0",
+      "hashPath": "ardalis.guardclauses.5.0.0.nupkg.sha512"
+    },
+    "EFCore.NamingConventions/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Xs5k8XfNKPkkQSkGmZkmDI1je0prLTdxse+s8PgTFZxyBrlrTLzTBUTVJtQKSsbvu4y+luAv8DdtO5SALJE++A==",
+      "path": "efcore.namingconventions/10.0.1",
+      "hashPath": "efcore.namingconventions.10.0.1.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G6yclVO5/csPzzsymV0SemY2NDqE31CP5M3jprF5IuO9wJsh4aUOfYD8HCLuDmM1D1CfReegVic48O2r79d46Q==",
+      "path": "microsoft.entityframeworkcore/10.0.7",
+      "hashPath": "microsoft.entityframeworkcore.10.0.7.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TuxExnfIS/bSq3z2CbH0LwZH1oyj9iHhSGneU4fpxl3ikjZGZdSae9gcfnImV1rufH8f/ab1NnHwyL2BLyeZOg==",
+      "path": "microsoft.entityframeworkcore.abstractions/10.0.7",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.10.0.7.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/10.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-midwPufIwXhOJcVhaZpCZGNbjy2QoPfHI+70nw2dGcoULEW9DybMvMPYkRjOJV0eI46a1oVFhU4lFYDEx6YUbg==",
+      "path": "microsoft.entityframeworkcore.relational/10.0.7",
+      "hashPath": "microsoft.entityframeworkcore.relational.10.0.7.nupkg.sha512"
+    },
+    "Npgsql/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5RfBI+wywJSFUNDE1L4ZbHEHCFTblo8Uf6A6oe4feOUFYiUQXyAf9GBh5qEZpvJaHiEbpBPkQumjEhXCJxdrg==",
+      "path": "npgsql/10.0.2",
+      "hashPath": "npgsql.10.0.2.nupkg.sha512"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P6EwH0Q4xkaA264iNZDqCPhWt8pscfUGxXazDQg4noBfqjoOlk4hKWfvBjF9ZX3R/9JybRmmJfmxr2iBMj0EpA==",
+      "path": "npgsql.entityframeworkcore.postgresql/10.0.1",
+      "hashPath": "npgsql.entityframeworkcore.postgresql.10.0.1.nupkg.sha512"
+    },
+    "Haskap.DddBase.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Application.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Domain.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Infra.Db.Contexts.EfCoreContext/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Infra.Db.Contexts.NpgsqlDbContext/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Haskap.DddBase.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Application.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Tenants.Application.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Application.Contracts.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Domain.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.AuditLog.Infra.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application.Contracts.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Application.Dtos.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Domain.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Infra.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Localization.Presentation.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Application.Contracts.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Application.Dtos.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.Domain.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.ModuleManagement.IntegrationEvents.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Modules.Tenants.Application.Dtos.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
