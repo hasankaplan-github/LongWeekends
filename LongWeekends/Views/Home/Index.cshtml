@@ -1,4 +1,5 @@
-﻿@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+﻿@using Haskap.DddBase.Domain.Common
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
 
 @{
     var antiforgeryToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
@@ -9,9 +10,17 @@
 <div id="calendar">
 </div>
 
+@section Styles {
+    <link href='~/lib/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css' rel='stylesheet' />
+}
+
+
 @section Scripts {
     <script src='~/lib/fullcalendar-6.1.20/dist/index.global.min.js'></script>
     <script src='~/lib/fullcalendar-6.1.20/packages/core/locales/tr.global.min.js'></script>
+
+    <script src="~/lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/lib/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tr.min.js"></script>
 
     <script>
 
@@ -23,6 +32,15 @@
             holidayColor: 'bg-danger',
             specialDayColor: 'bg-secondary'
         };
+
+        const monthlyDatePickerOptions = {
+            format: "mm-yyyy",
+            startView: "months",
+            minViewMode: "months",
+            viewMode: "months",
+            autoclose: true,
+            language: '@Locale.CurrentUiLocale.Value' //.split('-', 1)[0]
+        }
 
         $(document).ready(function () {
             let calendarEl = document.getElementById('calendar');
@@ -51,6 +69,19 @@
             });
 
             calendar.render();
+
+            let centerToolbarEl = calendarEl.querySelectorAll('.fc-toolbar-chunk')[1];
+            $(centerToolbarEl).prepend(
+                        `<div class="input-group">
+                            <input type="text" id="goToDate" class="form-control" aria-label="Go To Date" aria-describedby="d" />
+                            <span class="input-group-text" id="d"><i class="fa fa-calendar"></i></span>
+                        </div>`);
+               
+            $("#goToDate").datepicker(monthlyDatePickerOptions).datepicker("setDate", new Date());
+
+            $('#goToDate').datepicker().on('changeDate', function (e) {
+                calendar.gotoDate(e.date);
+            });
         });
 
         function setDayGridMonthViewEvents(startDate, endDate) {
