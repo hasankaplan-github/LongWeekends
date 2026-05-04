@@ -280,6 +280,9 @@
       },
       "Modules.TurkiyeSpecialDay.Domain/1.0.0": {
         "dependencies": {
+          "Haskap.DddBase.Application.Dtos": "1.0.0",
+          "Haskap.DddBase.Domain": "1.0.0",
+          "Haskap.DddBase.Utilities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.7",
           "Modules.SpecialDayBase.Domain": "1.0.0"
         },
