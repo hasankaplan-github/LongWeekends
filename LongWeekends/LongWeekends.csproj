@@ -9,15 +9,15 @@
   <ItemGroup>
     <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
     <PackageReference Include="EFCore.NamingConventions" Version="10.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.7">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,9 +46,6 @@
     <Reference Include="Haskap.DddBase.Utilities">
       <HintPath>..\References\Haskap.DddBase.Utilities.dll</HintPath>
     </Reference>
-    <Reference Include="Modules.GlobalExceptionHandling.Application.Contracts">
-      <HintPath>..\References\Modules.GlobalExceptionHandling.Application.Contracts.dll</HintPath>
-    </Reference>
     <Reference Include="Modules.GlobalExceptionHandling.Module">
       <HintPath>..\References\Modules.GlobalExceptionHandling.Module.dll</HintPath>
     </Reference>
@@ -61,6 +58,9 @@
     <Reference Include="Modules.ModuleManagement.Module">
       <HintPath>..\References\Modules.ModuleManagement.Module.dll</HintPath>
     </Reference>
+    <Reference Include="Modules.SpecialDayBase.Application">
+      <HintPath>..\References\Modules.SpecialDayBase.Application.dll</HintPath>
+    </Reference>
     <Reference Include="Modules.SpecialDayBase.Application.Contracts">
       <HintPath>..\References\Modules.SpecialDayBase.Application.Contracts.dll</HintPath>
     </Reference>
@@ -70,11 +70,11 @@
     <Reference Include="Modules.SpecialDayBase.Domain.Shared">
       <HintPath>..\References\Modules.SpecialDayBase.Domain.Shared.dll</HintPath>
     </Reference>
+    <Reference Include="Modules.SpecialDayBase.Infra">
+      <HintPath>..\References\Modules.SpecialDayBase.Infra.dll</HintPath>
+    </Reference>
     <Reference Include="Modules.SpecialDayBase.Module">
       <HintPath>..\References\Modules.SpecialDayBase.Module.dll</HintPath>
-    </Reference>
-    <Reference Include="Modules.TurkiyeSpecialDay.Application.Contracts">
-      <HintPath>..\References\Modules.TurkiyeSpecialDay.Application.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Modules.TurkiyeSpecialDay.Module">
       <HintPath>..\References\Modules.TurkiyeSpecialDay.Module.dll</HintPath>
