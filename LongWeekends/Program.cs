@@ -1,8 +1,17 @@
 using Haskap.DddBase.Domain.Common;
+using Haskap.DddBase.Domain.Shared;
 using Haskap.DddBase.Infra;
 using LongWeekends;
 using Microsoft.AspNetCore.Mvc;
 using Modules.GlobalExceptionHandling.Presentation;
+
+AppConfig.UseInMemoryModuleManagementStore = true;
+AppConfig.InMemoryEnabledModules = [
+    ("ModuleManagementModule", null),
+    ("SpecialDayBaseModule", null),
+    ("GlobalExceptionHandlingModule", null),
+    ("TurkiyeSpecialDayModule", null)
+    ];
 
 var builder = WebApplication.CreateBuilder(args);
 
