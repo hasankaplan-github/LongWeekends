@@ -8,11 +8,11 @@ namespace LongWeekends;
 
 public static class DependencyInjection
 {
-    private const string ConnectionStringName = "NeonDbConnectionString";
+    private const string ConnectionStringName = ""; //"NeonDbConnectionString";
 
     public static IServiceCollection AddModules(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddModule<ModuleManagementModule.Registrar>(configuration, ConnectionStringName, "ModuleManagementMigrations");
+        services.AddModule<ModuleManagementModule.Registrar>(configuration, ConnectionStringName, null);
         //services.AddModule<AuditLogModule.Registrar>(configuration, ConnectionStringName, "AuditLogMigrations");
 
         services.AddModule<GlobalExceptionHandlingModule.Registrar>(configuration, ConnectionStringName, null);

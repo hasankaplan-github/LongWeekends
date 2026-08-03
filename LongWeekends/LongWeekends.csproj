@@ -21,10 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Modules\ModuleManagementMigrations\ModuleManagementMigrations.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="Haskap.DddBase.Application.Contracts">
       <HintPath>..\References\Haskap.DddBase.Application.Contracts.dll</HintPath>
     </Reference>

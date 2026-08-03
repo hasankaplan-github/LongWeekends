@@ -1,6 +1,3 @@
 <Solution>
-  <Folder Name="/Modules/">
-    <Project Path="Modules/ModuleManagementMigrations/ModuleManagementMigrations.csproj" />
-  </Folder>
   <Project Path="LongWeekends/LongWeekends.csproj" />
 </Solution>
